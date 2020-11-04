@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import {Form} from './components/form';
+import {StyledButton} from './components/button';
+import SearchIcon from '@material-ui/icons/Search';
+import {StyledInput} from './components/input';
+import {Title} from './components/title';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Title>MHW <h1>Weakness <span></span></h1></Title>
+    <Form>
+      <StyledInput placeholder="Type monster name"/>
+      <StyledButton startIcon={<SearchIcon/>}>Search</StyledButton>
+    </Form>
+    </>
   );
 }
 
