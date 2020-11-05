@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledInput = styled.input`
+export const StyledInput = styled.input `
     width: 11rem;
     background-color: transparent;
     color: white;
@@ -26,4 +26,6 @@ export const StyledInput = styled.input`
            height: 4rem;
            
        }  
+
+
 `;
