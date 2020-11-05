@@ -8,7 +8,7 @@ import {Title} from './components/title';
 function App() {
   return (
     <>
-    <Title>MHW <h1>Weakness <span></span></h1></Title>
+    <Title>MHW <h1>Weakness</h1></Title>
     <Form>
       <StyledInput placeholder="Type monster name"/>
       <StyledButton startIcon={<SearchIcon/>}>Search</StyledButton>
