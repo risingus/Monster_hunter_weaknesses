@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { Button } from "@material-ui/core";
+import { colors } from "../style/globalStyle";
 
 export const StyledButton = styled(Button)`
   && {
-    background-color: #9c27b0;
-    color: white;
+    background-color: ${colors.button_primary_color};
+    color: ${colors.font_primary_color};
     width: 7rem;
     font-size: 0.8rem;
     height: 3rem;
@@ -12,7 +13,7 @@ export const StyledButton = styled(Button)`
     border-top-left-radius: 0;
 
     &:hover {
-      background-color: #7b1fa2;
+      background-color: ${colors.button_hover};
     }
 
     @media (min-width: 600px) {

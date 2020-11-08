@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { colors } from "../style/globalStyle";
 
 export const Title = styled.h1`
-  color: white;
+  color: ${colors.font_primary_color};
   display: flex;
   justify-content: center;
   font-size: 2.5rem;
@@ -11,7 +12,7 @@ export const Title = styled.h1`
   text-shadow: 5px 5px 0px rgba(156, 39, 176, 0.85);
   letter-spacing: 1rem;
 
-  h1 {
+  p {
     font-size: 2.5rem;
     margin-left: 1rem;
     overflow: hidden;
@@ -40,7 +41,7 @@ export const Title = styled.h1`
   }
 
   @media (min-width: 600px) {
-    h1 {
+    p {
       font-size: 6rem;
     }
   }
