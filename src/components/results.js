@@ -34,7 +34,7 @@ export const Results = styled.div`
     p {
       background-color: ${colors.button_primary_color};
       padding: 0.3rem;
-      border: 2px solid white;
+      border: 2px solid ${colors.font_primary_color};
       border-radius: 0.8rem;
       margin: 0.1rem;
     }

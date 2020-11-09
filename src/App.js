@@ -22,8 +22,6 @@ function App() {
 
     setResults(result);
     setNewResult("");
-
-    console.log(result);
   }
 
   return (
