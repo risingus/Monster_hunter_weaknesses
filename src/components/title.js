@@ -25,7 +25,7 @@ export const Title = styled.h1`
         width: 0;
       }
       to {
-        width: 37rem;
+        width: 25rem;
       }
     }
 
@@ -43,6 +43,15 @@ export const Title = styled.h1`
   @media (min-width: 600px) {
     p {
       font-size: 6rem;
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 45rem;
+        }
+      }
     }
   }
 `;

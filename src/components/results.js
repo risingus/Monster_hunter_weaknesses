@@ -16,8 +16,7 @@ export const Results = styled.div`
   }
 
   img {
-    margin: 2rem;
-    width: 80px;
+    width: 40px;
   }
 
   p {
