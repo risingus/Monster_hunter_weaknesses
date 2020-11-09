@@ -5,7 +5,7 @@ export const Title = styled.h1`
   color: ${colors.font_primary_color};
   display: flex;
   justify-content: center;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   align-items: center;
   flex-wrap: wrap;
   margin-top: 3rem;
@@ -13,7 +13,7 @@ export const Title = styled.h1`
   letter-spacing: 1rem;
 
   p {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-left: 1rem;
     overflow: hidden;
     border-right: 0.3rem solid #9c27b0;

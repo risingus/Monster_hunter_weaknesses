@@ -6,6 +6,7 @@ import { StyledInput } from "./components/input";
 import { Title } from "./components/title";
 import { Results } from "./components/results";
 import api from "./services/api";
+import { getMonsterIcon } from "./services/monsterIcon";
 
 function App() {
   const [newResult, setNewResult] = useState("");
@@ -43,9 +44,16 @@ function App() {
       {results.map((result) => (
         <Results key={result.id}>
           <h1>{result.name}</h1>
-          <p>Weaknesses</p>
-          <p>Elements: {result.elements}</p>
-          <p>{result.description}</p>
+          <h2>Weaknesses</h2>
+          <div id="weak">
+            {result.weaknesses.map((weak) => (
+              <p key={weak.element}>
+                {weak.element}: lvl {weak.stars}
+              </p>
+            ))}
+          </div>
+          <img src={getMonsterIcon(result.name)} alt="MonsterIcon" />
+          <p id="description">{result.description}</p>
         </Results>
       ))}
     </>
