@@ -14,6 +14,7 @@ export const Title = styled.h1`
 
   p {
     font-size: 2rem;
+    letter-spacing: 0.5rem;
     margin-left: 1rem;
     overflow: hidden;
     border-right: 0.3rem solid #9c27b0;
@@ -44,6 +45,7 @@ export const Title = styled.h1`
   @media (min-width: 750px) {
     p {
       font-size: 6rem;
+      letter-spacing: 1rem;
 
       @keyframes typing {
         from {
@@ -55,10 +57,4 @@ export const Title = styled.h1`
       }
     }
   }
-
-  /* @media (min-width: 750px) {
-    p {
-      font-size: 4.5rem;
-    }
-  } */
 `;
