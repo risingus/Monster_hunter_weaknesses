@@ -27,7 +27,7 @@ export const Title = styled.h1`
         width: 0;
       }
       to {
-        width: 25rem;
+        width: 17rem;
       }
     }
 
