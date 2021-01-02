@@ -1,11 +1,11 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { Form } from "./components/form";
 import { StyledButton } from "./components/button";
 import SearchIcon from "@material-ui/icons/Search";
 import { StyledInput } from "./components/input";
 import { Title } from "./components/title";
 import { Results } from "./components/results";
-import {StyledAlert} from "./components/allert";
+import { StyledAlert } from "./components/allert";
 import api from "./services/api";
 import { getMonsterIcon } from "./services/monsterIcon";
 
@@ -16,21 +16,18 @@ function App() {
 
   const [results, setResults] = useState([]);
 
-
   async function handleAddResult(FormEvent) {
-    setAlertResult(false)
+    setAlertResult(false);
     FormEvent.preventDefault();
-    await api.get(`monsters?q={"name": "${newResult}"}`).then((response)=> {
+    await api.get(`monsters?q={"name": "${newResult}"}`).then((response) => {
       const result = response.data;
       setResults(result);
       setNewResult("");
-      console.log(response.data)
-      
-      if(response.data.length === 0){
+
+      if (response.data.length === 0) {
         setAlertResult(true);
-        console.log('aqui')
       }
-    })   
+    });
   }
 
   return (
@@ -49,13 +46,12 @@ function App() {
           Search
         </StyledButton>
       </Form>
-      { alertResult &&  <StyledAlert 
-      variant="outlined"
-      severity="error"
-      >
-        Monstro não encontrado no banco ou ortografia incorreta
-      </StyledAlert>}
-        {results.map((result) => (
+      {alertResult && (
+        <StyledAlert variant="outlined" severity="error">
+          Monstro não encontrado no banco ou ortografia incorreta
+        </StyledAlert>
+      )}
+      {results.map((result) => (
         <Results key={result.id}>
           <h1>{result.name}</h1>
           <h2>Weaknesses</h2>
