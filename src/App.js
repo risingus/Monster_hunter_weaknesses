@@ -1,27 +1,36 @@
-import React, { useState } from "react";
+import React, {useState } from "react";
 import { Form } from "./components/form";
 import { StyledButton } from "./components/button";
 import SearchIcon from "@material-ui/icons/Search";
 import { StyledInput } from "./components/input";
 import { Title } from "./components/title";
 import { Results } from "./components/results";
+import {StyledAlert} from "./components/allert";
 import api from "./services/api";
 import { getMonsterIcon } from "./services/monsterIcon";
 
 function App() {
   const [newResult, setNewResult] = useState("");
 
+  const [alertResult, setAlertResult] = useState(false);
+
   const [results, setResults] = useState([]);
 
+
   async function handleAddResult(FormEvent) {
+    setAlertResult(false)
     FormEvent.preventDefault();
-
-    const response = await api.get(`monsters?q={"name": "${newResult}"}`);
-
-    const result = response.data;
-
-    setResults(result);
-    setNewResult("");
+    await api.get(`monsters?q={"name": "${newResult}"}`).then((response)=> {
+      const result = response.data;
+      setResults(result);
+      setNewResult("");
+      console.log(response.data)
+      
+      if(response.data.length === 0){
+        setAlertResult(true);
+        console.log('aqui')
+      }
+    })   
   }
 
   return (
@@ -31,6 +40,7 @@ function App() {
       </Title>
       <Form onSubmit={handleAddResult}>
         <StyledInput
+          required
           value={newResult}
           onChange={(e) => setNewResult(e.target.value)}
           placeholder="Type monster name"
@@ -39,7 +49,13 @@ function App() {
           Search
         </StyledButton>
       </Form>
-      {results.map((result) => (
+      { alertResult &&  <StyledAlert 
+      variant="outlined"
+      severity="error"
+      >
+        Monstro não encontrado no banco ou ortografia incorreta
+      </StyledAlert>}
+        {results.map((result) => (
         <Results key={result.id}>
           <h1>{result.name}</h1>
           <h2>Weaknesses</h2>
