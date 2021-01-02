@@ -17,7 +17,7 @@ export const Title = styled.h1`
     letter-spacing: 0.5rem;
     margin-left: 1rem;
     overflow: hidden;
-    border-right: 0.3rem solid #9c27b0;
+    border-right: 0.3rem solid ${colors.button_hover};
     white-space: nowrap;
     animation: typing 1.5s steps(16, end), blink-caret 0.9s step-end infinite;
     max-width: 750px;
@@ -37,7 +37,7 @@ export const Title = styled.h1`
         border-color: transparent;
       }
       50% {
-        border-color: #9c27b0;
+        border-color: ${colors.button_primary_color}
       }
     }
   }
