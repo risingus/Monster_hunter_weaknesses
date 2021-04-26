@@ -4,12 +4,12 @@
   "private": true,
   "husky": {
     "hooks": {
-      "pre-commit": "echo 'test'"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
     "*.js": [
-      "./node_modules/.bin/eslint src --fix",
+      "eslint --fix",
       "git add"
     ]
   },
