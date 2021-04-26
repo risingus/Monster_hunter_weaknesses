@@ -9,7 +9,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint --fix",
+      "eslint --fix '**/*.js'",
       "git add"
     ]
   },
