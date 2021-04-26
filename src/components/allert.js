@@ -1,9 +1,6 @@
-
-import styled from "styled-components";
-import {Alert} from '@material-ui/lab';
-import { colors } from "../style/globalStyle";
-
-
+import styled from 'styled-components';
+import { Alert } from '@material-ui/lab';
+import { colors } from '../style/globalStyle';
 
 export const StyledAlert = styled(Alert)`
 &&{

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { colors } from "../style/globalStyle";
+import styled from 'styled-components';
+import { colors } from '../style/globalStyle';
 
 export const StyledInput = styled.input`
   width: 11rem;

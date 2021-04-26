@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { colors } from "../style/globalStyle";
+import styled from 'styled-components';
+import { colors } from '../style/globalStyle';
 
 export const Title = styled.h1`
   color: ${colors.font_primary_color};

@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { Button } from "@material-ui/core";
-import { colors } from "../style/globalStyle";
+import styled from 'styled-components';
+import { Button } from '@material-ui/core';
+import { colors } from '../style/globalStyle';
 
 export const StyledButton = styled(Button)`
   && {

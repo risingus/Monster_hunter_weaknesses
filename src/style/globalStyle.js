@@ -1,10 +1,10 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const colors = {
-  font_primary_color: "white",
-  background_primary_color: "#212121",
-  button_primary_color: "#9c27b0",
-  button_hover: "#7b1fa2",
+  font_primary_color: 'white',
+  background_primary_color: '#212121',
+  button_primary_color: '#9c27b0',
+  button_hover: '#7b1fa2',
 };
 
 export const GlobalStyle = createGlobalStyle`
