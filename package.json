@@ -36,6 +36,7 @@
     "react-refresh": "^0.10.0",
     "react-scripts": "4.0.0",
     "react-swipeable-views": "^0.13.9",
+    "react-toastify": "^7.0.4",
     "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
   },
