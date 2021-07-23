@@ -1,29 +1,25 @@
 import styled from 'styled-components';
 import { Button } from '@material-ui/core';
-
+import { colors } from '../style/globalStyle';
 
 export const StyledButton = styled(Button)`
-    && {
-        background-color: #9c27b0;
-        color: white;
-        width: 7rem;
-        font-size: .8rem;
-        height: 3rem;
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 0;
+  && {
+    background-color: ${colors.button_primary_color};
+    color: ${colors.font_primary_color};
+    width: 7rem;
+    font-size: 0.8rem;
+    height: 3rem;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
 
+    &:hover {
+      background-color: ${colors.button_hover};
+    }
 
-        &:hover{
-            background-color: #7b1fa2;
-        }
-
-        @media (min-width: 600px) {
-           
-            font-size: 1rem;
-            width: 8rem;
-            height: 4rem;
-            
-        }  
-
-    }       
+    @media (min-width: 600px) {
+      font-size: 1rem;
+      width: 8rem;
+      height: 4rem;
+    }
+  }
 `;
