@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { colors } from '../style/globalStyle';
 
 export const StyledInput = styled.input`
   width: 11rem;
@@ -10,7 +9,7 @@ export const StyledInput = styled.input`
   border-right: none;
   border-left: none;
   border-top: none;
-  border-bottom-color: ${colors.button_hover};
+  border-bottom-color: ${({ theme }) => theme.button_hover};
 
   &::placeholder {
     color: white;
