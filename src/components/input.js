@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledInput = styled.input`
   width: 11rem;
   background-color: transparent;
-  color: white;
+  color: ${({ theme }) => theme.font_primary_color};
   height: 3rem;
   font-size: 1rem;
   border-right: none;
@@ -12,7 +12,7 @@ export const StyledInput = styled.input`
   border-bottom-color: ${({ theme }) => theme.button_hover};
 
   &::placeholder {
-    color: white;
+    color: ${({ theme }) => theme.title_text_color};
   }
 
   &:focus {

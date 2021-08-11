@@ -79,7 +79,7 @@ function App() {
             ))}
           </div>
           <img src={getMonsterIcon(result.name)} alt="MonsterIcon" />
-          <p id="description">{result.description}</p>
+          <span id="description">{result.description}</span>
         </Results>
       ))}
     </ThemeProvider>

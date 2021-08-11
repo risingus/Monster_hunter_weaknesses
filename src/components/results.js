@@ -7,10 +7,11 @@ export const Results = styled.div`
   flex-direction: column;
   text-align: center;
   margin: 3rem 1rem;
-  color: ${({ theme }) => theme.font_primary_color};
+  color: ${({ theme }) => theme.font_secondary_color};
 
   h1 {
     text-shadow: ${({ theme }) => theme.text_shadow};
+    color: ${({ theme }) => theme.title_text_color};
     letter-spacing: 1rem;
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -20,6 +21,7 @@ export const Results = styled.div`
     margin: 1rem;
     font-size: 1.5rem;
     text-shadow: ${({ theme }) => theme.text_shadow};
+    color: ${({ theme }) => theme.title_text_color};
     letter-spacing: 0.3rem;
   }
 
@@ -47,6 +49,12 @@ export const Results = styled.div`
   p {
     font-size: 1.3rem;
   }
+
+  span {
+    font-size: 1.3rem;
+    color: ${({ theme }) => theme.title_text_color};
+  }
+
 
   #description {
     max-width: 50rem;

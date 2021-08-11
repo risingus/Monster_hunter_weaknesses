@@ -4,7 +4,7 @@ import { Button } from '@material-ui/core';
 export const StyledButton = styled(Button)`
   && {
     background-color: ${({ theme }) => theme.button_primary_color};
-    color: ${({ theme }) => theme.font_primary_color};
+    color: ${({ theme }) => theme.button_text_color};
     width: 7rem;
     font-size: 0.8rem;
     height: 3rem;

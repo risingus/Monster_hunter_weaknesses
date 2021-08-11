@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Title = styled.h1`
-  color: ${({ theme }) => theme.font_primary_color};
+  color: ${({ theme }) => theme.title_text_color};
   display: flex;
   justify-content: center;
   font-size: 2.2rem;

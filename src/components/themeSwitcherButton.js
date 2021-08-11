@@ -13,9 +13,17 @@ const defaultOptions = {
 };
 
 const ThemeSwitcherButton = styled.button`
-   background: transparent;
-   border: none;
-   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  height: 2rem;
+`;
+
+const StyledDiv = styled.div`
+  pointer-events: none;
 `;
 
 // eslint-disable-next-line react/prop-types
@@ -38,16 +46,18 @@ export const SwitchButton = ({ setDarkTheme, isDarkTheme }) => {
   return (
 
     <ThemeSwitcherButton type="button" onClick={() => changeTheme()}>
-      <Lottie
-        options={defaultOptions}
-        segments={animationState.segments}
-        height={80}
-        width={80}
-        direction={animationState.direction}
-        isStopped={animationState.isStopped}
-        isPaused={animationState.isPaused}
-        speed={1.5}
-      />
+      <StyledDiv>
+        <Lottie
+          options={defaultOptions}
+          segments={animationState.segments}
+          height={80}
+          width={80}
+          direction={animationState.direction}
+          isStopped={animationState.isStopped}
+          isPaused={animationState.isPaused}
+          speed={1.5}
+        />
+      </StyledDiv>
     </ThemeSwitcherButton>
   );
 };
