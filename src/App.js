@@ -1,6 +1,10 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import SearchIcon from '@material-ui/icons/Search';
 import { Flip, toast, ToastContainer } from 'react-toastify';
+import SearchIcon from '@material-ui/icons/Search';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from './style/globalStyle';
+import { lightTheme, darkTheme } from './style/theme';
 import { Form } from './components/form';
 import { StyledButton } from './components/button';
 import { StyledInput } from './components/input';
@@ -8,9 +12,12 @@ import { Title } from './components/title';
 import { Results } from './components/results';
 import api from './services/api';
 import { getMonsterIcon } from './services/monsterIcon';
+import { SwitchButton } from './components/themeSwitcherButton';
 import 'react-toastify/dist/ReactToastify.css';
+import { TitleDiv } from './components/divTitle';
 
 function App() {
+  const [isDarkTheme, setDarkTheme] = useState(true);
   const [search, setSearch] = useState('');
 
   const [results, setResults] = useState([]);
@@ -33,11 +40,16 @@ function App() {
   }
 
   return (
-    <>
-      <Title>
-        MHW
-        <p>Weaknesses</p>
-      </Title>
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+      <GlobalStyle />
+      <TitleDiv>
+        <Title>
+          MHW
+          <p>Weaknesses</p>
+        </Title>
+        <SwitchButton setDarkTheme={setDarkTheme} isDarkTheme={isDarkTheme} />
+      </TitleDiv>
+
       <Form onSubmit={handleSearchMonster}>
         <StyledInput
           required
@@ -67,10 +79,10 @@ function App() {
             ))}
           </div>
           <img src={getMonsterIcon(result.name)} alt="MonsterIcon" />
-          <p id="description">{result.description}</p>
+          <span id="description">{result.description}</span>
         </Results>
       ))}
-    </>
+    </ThemeProvider>
   );
 }
 

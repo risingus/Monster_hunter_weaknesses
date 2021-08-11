@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 import { Alert } from '@material-ui/lab';
-import { colors } from '../style/globalStyle';
 
 export const StyledAlert = styled(Alert)`
 &&{
-    color:${colors.font_primary_color};
+    color:${({ theme }) => theme.font_primary_color};
     margin-top: 1rem;
     width: 18rem;
     text-align: center;

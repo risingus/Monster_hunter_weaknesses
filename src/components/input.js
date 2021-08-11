@@ -1,19 +1,18 @@
 import styled from 'styled-components';
-import { colors } from '../style/globalStyle';
 
 export const StyledInput = styled.input`
   width: 11rem;
   background-color: transparent;
-  color: white;
+  color: ${({ theme }) => theme.font_primary_color};
   height: 3rem;
   font-size: 1rem;
   border-right: none;
   border-left: none;
   border-top: none;
-  border-bottom-color: ${colors.button_hover};
+  border-bottom-color: ${({ theme }) => theme.button_hover};
 
   &::placeholder {
-    color: white;
+    color: ${({ theme }) => theme.title_text_color};
   }
 
   &:focus {
