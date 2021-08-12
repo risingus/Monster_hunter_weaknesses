@@ -37,8 +37,8 @@ export const SwitchButton = ({ setDarkTheme, isDarkTheme }) => {
       ...animationState,
       isStopped: false,
       isPaused: false,
-      direction: animationState.direction === 1 ? -1 : 1,
-      segments: animationState.direction === 1 ? [0, 20] : [20, 0],
+      direction: isDarkTheme ? -1 : 1,
+      segments: isDarkTheme ? [0, 20] : [20, 0],
     });
     setDarkTheme(!isDarkTheme);
   };
