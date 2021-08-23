@@ -1,16 +1,7 @@
-import Lottie from 'react-lottie';
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import animationData from '../assets/animations/themeSwitcherAnimation.json';
-
-const defaultOptions = {
-  loop: false,
-  autoplay: false,
-  animationData,
-  rendererSettings: {
-    preserveAspectRatio: 'xMidYMid slice',
-  },
-};
+import Brightness5Icon from '@material-ui/icons/Brightness5';
+import NightsStayIcon from '@material-ui/icons/NightsStay';
 
 const ThemeSwitcherButton = styled.button`
   display: flex;
@@ -26,20 +17,27 @@ const StyledDiv = styled.div`
   pointer-events: none;
 `;
 
+const StyledMoon = styled(NightsStayIcon)`
+&& {
+  color: ${({ theme }) => theme.button_primary_color};
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+  
+`;
+
+const StyledSun = styled(Brightness5Icon)`
+&& {
+  color: ${({ theme }) => theme.button_primary_color};
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+  
+`;
+
 // eslint-disable-next-line react/prop-types
 export const SwitchButton = ({ setDarkTheme, isDarkTheme }) => {
-  const [animationState, setAnimationState] = useState({
-    isStopped: true, isPaused: true, direction: 1, segments: [0, 20],
-  });
-
   const changeTheme = () => {
-    setAnimationState({
-      ...animationState,
-      isStopped: false,
-      isPaused: false,
-      direction: isDarkTheme ? -1 : 1,
-      segments: isDarkTheme ? [0, 20] : [20, 0],
-    });
     setDarkTheme(!isDarkTheme);
   };
 
@@ -47,16 +45,7 @@ export const SwitchButton = ({ setDarkTheme, isDarkTheme }) => {
 
     <ThemeSwitcherButton type="button" onClick={() => changeTheme()}>
       <StyledDiv>
-        <Lottie
-          options={defaultOptions}
-          segments={animationState.segments}
-          height={80}
-          width={80}
-          direction={animationState.direction}
-          isStopped={animationState.isStopped}
-          isPaused={animationState.isPaused}
-          speed={1.5}
-        />
+        {!isDarkTheme ? (<StyledMoon />) : (<StyledSun />) }
       </StyledDiv>
     </ThemeSwitcherButton>
   );
