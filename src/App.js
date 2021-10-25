@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { Flip, toast, ToastContainer } from 'react-toastify';
 import SearchIcon from '@material-ui/icons/Search';
@@ -50,7 +49,7 @@ function App() {
         <SwitchButton setDarkTheme={setDarkTheme} isDarkTheme={isDarkTheme} />
       </TitleDiv>
 
-      <Form onSubmit={handleSearchMonster}>
+      <Form onSubmit={(e) => handleSearchMonster(e)}>
         <StyledInput
           required
           value={search}
