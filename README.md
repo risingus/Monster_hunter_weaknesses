@@ -1,10 +1,19 @@
- <img src="https://github.com/risingus/Monster_hunter_weaknesses/blob/master/public/img/readme1.PNG" alt="project preview" width=80%>
- <img src="https://github.com/risingus/Monster_hunter_weaknesses/blob/master/public/img/readme2.PNG" alt="project preview" width=80%>
+ <img src="https://github.com/risingus/Monster_hunter_weaknesses/blob/master/public/img/readme1.PNG" alt="project preview" width=40%>
+ <img src="https://github.com/risingus/Monster_hunter_weaknesses/blob/master/public/img/readme2.PNG" alt="project preview" width=40%>
+ <img src="https://github.com/risingus/Monster_hunter_weaknesses/blob/master/public/img/mhwInitialWhite.png" alt="project preview" width=40%>
+ <img src="https://github.com/risingus/Monster_hunter_weaknesses/blob/master/public/img/mhwResultWhite.png" alt="project preview" width=40%>
  <h1>💻 Project </h1>
- <p>Search weaknesses from Monster Hunter World monsters.</p>
+ <p>
+ A simple project to search weakness of monsters of Monster Hunter World.
+ This was my first project solo with react, i used axios to make api calls,
+ React-toastify to show messages when handling errors,
+ Styled-Components to style and create a theme selector.
+</p>
  
 <h1>Used technologies</h1>
 <li><a href="https://styled-components.com/">Styled Components | CSS-IN-JS</a></li>
+<li><a href="https://github.com/axios/axios">Axios</a></li>
+<li><a href="https://fkhadra.github.io/react-toastify/introduction">Toastify</a></li>
 <li><a href="https://pt-br.reactjs.org/">ReactJS</a></li>
 <li><a href="https://material-ui.com/">Material UI</a></li>
 <li><a href="https://developer.mozilla.org/pt-BR/docs/Aprender/JavaScript">Javascript</a></li>
