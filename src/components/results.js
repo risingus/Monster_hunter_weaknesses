@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { colors } from '../style/globalStyle';
 
 export const Results = styled.div`
   display: flex;
@@ -8,10 +7,11 @@ export const Results = styled.div`
   flex-direction: column;
   text-align: center;
   margin: 3rem 1rem;
-  color: ${colors.font_primary_color};
+  color: ${({ theme }) => theme.font_secondary_color};
 
   h1 {
-    text-shadow: 3px 3px 0px rgba(156, 39, 176, 0.85);
+    text-shadow: ${({ theme }) => theme.text_shadow};
+    color: ${({ theme }) => theme.title_text_color};
     letter-spacing: 1rem;
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -20,7 +20,8 @@ export const Results = styled.div`
   h2 {
     margin: 1rem;
     font-size: 1.5rem;
-    text-shadow: 3px 3px 0px rgba(156, 39, 176, 0.85);
+    text-shadow: ${({ theme }) => theme.text_shadow};
+    color: ${({ theme }) => theme.title_text_color};
     letter-spacing: 0.3rem;
   }
 
@@ -32,9 +33,9 @@ export const Results = styled.div`
     max-width: 300px;
 
     p {
-      background-color: ${colors.button_primary_color};
+      background-color: ${({ theme }) => theme.button_primary_color};
       padding: 0.3rem;
-      border: 2px solid ${colors.font_primary_color};
+      border: 2px solid ${({ theme }) => theme.font_primary_color};
       border-radius: 0.8rem;
       margin: 0.1rem;
     }
@@ -48,6 +49,12 @@ export const Results = styled.div`
   p {
     font-size: 1.3rem;
   }
+
+  span {
+    font-size: 1.3rem;
+    color: ${({ theme }) => theme.title_text_color};
+  }
+
 
   #description {
     max-width: 50rem;
